@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import useRefreshToken from '../hooks/useRefreshToken';
 import useAuth from '../hooks/useAuth';
 
@@ -7,14 +7,12 @@ const PersistLogin = () => {
     const [isLoading, setIsLoading] = useState(true);
     const refresh = useRefreshToken();
     const { auth } = useAuth();
-    const sent = useRef(false);
 
     useEffect(() => {
         const verifyRefreshToken = async () => {
             try {
-                if (!auth?.accessToken && !sent.current) {
+                if (!auth?.accessToken) {
                     await refresh();
-                    sent.current = true;
                 }
             } catch (error) {
                 console.error(error);
@@ -24,7 +22,7 @@ const PersistLogin = () => {
         };
 
         !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false);
-    }, [auth?.accessToken, refresh]);
+    }, []);
 
     return (
         <>
