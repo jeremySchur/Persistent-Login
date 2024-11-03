@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    background-color: dodgerblue;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-error {
+    background-color: rgb(255, 177, 177);
+    color: rgb(158, 37, 37);
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.form-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.form-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-instructions {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.instruction-icon {
+    margin-right: 5px;
+}
+
+.form-submit {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: darkslategray;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.form-submit-valid {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: darkslategray;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+}
+
+.form-submit-valid:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.form-submit-valid:focus {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.form-footer {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.form-signin {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.form-signin a {
+    color: white;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.users-title {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.users-list {
+    color: white;
+    list-style-type: none;
+}
+
+.logout-button {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: darkslategray;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.logout-button:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.logout-button:focus {
+    background-color: dodgerblue;
+    color: white;
+}
